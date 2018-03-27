@@ -1,7 +1,7 @@
 <section>
   <div class="container">
     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-      <agm-circle [latitude]="lat" [longitude]="lng" [circleDraggable]="true" [radius]="radius">
+      <agm-circle (dragEnd)="mapDragEnd($event)" [latitude]="lat" [longitude]="lng" [circleDraggable]="true" [radius]="radius">
           <agm-marker *ngFor="let restaurant of theRestaurants" [latitude]="restaurant.address.location.lat" [longitude]="restaurant.address.location.lng">
               <agm-info-window>
                   <p><b>{{restaurant.name}}</b></p>

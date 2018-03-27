@@ -20,4 +20,7 @@ export class MapComponent implements OnInit {
     this.radius = Number(newRadius.value);
     console.log(this.radius);
   }
+  mapDragEnd($event) {
+    console.log('dragend');
+  }
 }
