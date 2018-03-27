@@ -3,6 +3,8 @@
     <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
 
       <agm-circle (dragEnd)="mapDragEnd($event)" (radiusChange)="mapRadiusChange($event)" [latitude]="lat" [longitude]="lng" [circleDraggable]="true" [radius]="radius">
+          <!-- <agm-marker [latitude]="lat" [longitude]="lng" [markerDraggable]="true" [iconUrl]="'https://d30y9cdsu7xlg0.cloudfront.net/png/8205-200.png'" (dragEnd)="mapDragEnd($event, latitude, longitude)">
+          </agm-marker> -->
           <agm-marker *ngFor="let restaurant of theRestaurants" [latitude]="restaurant.address.location.lat" [longitude]="restaurant.address.location.lng">
               <agm-info-window>
                   <p><b>{{restaurant.name}}</b></p>
