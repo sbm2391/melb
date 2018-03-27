@@ -4,16 +4,27 @@ import {HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { RestaurantService } from './services/restaurant.service';
+import { MapComponent } from './map/map.component';
+
+import { AgmCoreModule } from '@agm/core';
+import { CardComponent } from './card/card.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDB4N0qSz7PO1NvWoEbcM5PFBYwKGxwD-I'
+    })
   ],
   providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
