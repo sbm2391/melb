@@ -1,7 +1,31 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <section>
-  <div *ngFor="let restaurant of restaurants">
-    <h2>{{restaurant.name}}</h2>
-  </div>
+  <div >
+    <div class="row">
+        <div *ngFor="let restaurant of restaurants" class="col s12 m4">
+          <div class="card">
+            <div class="card-content">
+              <p class="text-center"><b>{{restaurant.name}}</b></p>
+              <div class="flex-box-row">
+                <div class="flex-box-column">
+                  <div class="text-left">
+                    <p><b>Contact</b></p>
+                    <p><b>Email:</b> {{restaurant.contact.email}}</p>
+                    <p><b>Phone:</b> {{restaurant.contact.phone}}</p>
+                  </div>
+                </div>
+                <div class="flex-box-column">
+                  <p><b>Rating</b></p>
+                  <div class="btn-floating btn-large waves-effect waves-light red">{{restaurant.rating}}</div>
+                </div>
+              </div>
+            </div>
+            <div class="card-action text-center">
+              <a href={{restaurant.contact.site}}>Go to the site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
 
