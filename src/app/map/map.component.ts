@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MapComponent implements OnInit {
   @Input() theRestaurants;
-  title = 'My first AGM project';
+
   lat = 19.438655;
   lng = -99.1305917;
   zoom = 16;
@@ -16,11 +16,19 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
   }
+
   sendRadius(newRadius) {
     this.radius = Number(newRadius.value);
     console.log(this.radius);
   }
   mapDragEnd($event) {
     console.log('dragend');
+  }
+  mapRadiusChange($event) {
+    console.log('radius change');
+  }
+
+  radiusBounds() {
+
   }
 }
