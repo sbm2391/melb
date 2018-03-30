@@ -7,7 +7,7 @@
               <p class="text-center"><b>{{restaurant.name}}</b></p>
               <div class="flex-box-row">
                 <div class="flex-box-column">
-                  <div class="text-left">
+                  <div>
                     <p><b>Contact</b></p>
                     <p><b>Email:</b> {{restaurant.contact.email}}</p>
                     <p><b>Phone:</b> {{restaurant.contact.phone}}</p>
@@ -20,12 +20,8 @@
               </div>
             </div>
             <div class="card-action text-center flex-box-row">
-              <div>
-              <a href={{restaurant.contact.site}}>Go to the site</a>
-              </div>
-              <div>
-                  <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-              </div>
+              <a class="contact-site" href={{restaurant.contact.site}}>Go to the site</a>
+              <div class="fb-like facebook" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
             </div>
           </div>
         </div>
