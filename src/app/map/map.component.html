@@ -1,22 +1,22 @@
 <section>
-  <div class="container">
-    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-
-      <agm-circle (dragEnd)="mapDragEnd($event)" [latitude]="lat" [longitude]="lng" [circleDraggable]="true" [radius]="radius">
-          <div *ngFor="let restaurant of theRestaurants">
-          <agm-marker  *ngIf="getDistance(restaurant.address.location.lat,restaurant.address.location.lng) <= radius" [latitude]="restaurant.address.location.lat" [longitude]="restaurant.address.location.lng">
-              <agm-info-window>
-                  <p><b>{{restaurant.name}}</b></p>
-                  <p><b>Rating: {{restaurant.rating}}</b></p>
-              </agm-info-window>
-          </agm-marker>
-        </div>
-      </agm-circle>
-    </agm-map>
-
-    <input #newRadius type="number" (keydown.enter)="sendRadius(newRadius)" placeholder="type the radius in meters">
+  <div class="container flex-box-row">
+    <div class="restaurant-map">
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+        <agm-circle (dragEnd)="mapDragEnd($event)" [latitude]="lat" [longitude]="lng" [circleDraggable]="true" [radius]="radius">
+            <div *ngFor="let restaurant of insideRadius">
+            <agm-marker [latitude]="restaurant.address.location.lat" [longitude]="restaurant.address.location.lng">
+                <agm-info-window>
+                    <p><b>{{restaurant.name}}</b></p>
+                    <p><b>Rating: {{restaurant.rating}}</b></p>
+                </agm-info-window>
+            </agm-marker>
+          </div>
+        </agm-circle>
+      </agm-map>
+      <input #newRadius type="number" (keydown.enter)="sendRadius(newRadius)" placeholder="type the radius in meters">
+    </div> 
+    <app-statistics [theRestaurants]="insideRadius"></app-statistics>
   </div>
-  
 </section>
-
+<app-card [theRestaurants]="insideRadius"></app-card>
 

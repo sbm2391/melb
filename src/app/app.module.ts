@@ -8,12 +8,14 @@ import { MapComponent } from './map/map.component';
 
 import { AgmCoreModule } from '@agm/core';
 import { CardComponent } from './card/card.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
-    CardComponent
+    CardComponent,
+    StatisticsComponent
   ],
   imports: [
     BrowserModule,
