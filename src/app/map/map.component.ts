@@ -26,20 +26,23 @@ constructor(private restaurantService: RestaurantService) {}
   }
 
   restaurantInsideRadius() {
+    this.insideRadius = [];
     this.restaurants.forEach(restaurant => {
       if (this.getDistance(restaurant.address.location.lat, restaurant.address.location.lng) <= this.radius && this.insideRadius.indexOf(restaurant) < 0) {
         this.insideRadius.push(restaurant);
-      } else {
-        if (this.insideRadius.indexOf(restaurant) >= 0) {
-          this.insideRadius.splice(this.insideRadius.indexOf(restaurant), 1);
-        }
       }
+      // else {
+      //   if (this.insideRadius.indexOf(restaurant) >= 0) {
+      //     this.insideRadius.splice(this.insideRadius.indexOf(restaurant), 1);
+      //   }
+      //}
     });
     console.log(this.insideRadius);
   }
 
   sendRadius(newRadius) {
     this.radius = Number(newRadius.value);
+    this.restaurantInsideRadius();
   }
 
   mapDragEnd($event) {
