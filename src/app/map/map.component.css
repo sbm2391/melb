@@ -2,19 +2,6 @@ agm-map {
     height: 350px;
   }
 
-  .restaurant-map{
-    min-width: 40vw; 
-  }
-
   section{
       padding: 20px 0;
   }
-
-  .flex-box-row{
-      display: flex;
-      align-items: flex-start;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-  }
- 

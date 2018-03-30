@@ -47,7 +47,7 @@ standardDeviation() {
   });
   const avgSquareDiff = this.avarage(squareDiffs);
   const stdDev = Math.sqrt(avgSquareDiff);
-  return Math.round(stdDev * 10) / 10;
+  return Math.round(stdDev * 100) / 100;
 }
 
 }
