@@ -26,12 +26,16 @@ constructor(private restaurantService: RestaurantService) {}
   }
 
   restaurantInsideRadius() {
-    console.log(this.restaurants);
     this.restaurants.forEach(restaurant => {
-      if (this.getDistance(restaurant.address.location.lat, restaurant.address.location.lng) <= this.radius) {
+      if (this.getDistance(restaurant.address.location.lat, restaurant.address.location.lng) <= this.radius && this.insideRadius.indexOf(restaurant) < 0) {
         this.insideRadius.push(restaurant);
+      } else {
+        if (this.insideRadius.indexOf(restaurant) >= 0) {
+          this.insideRadius.splice(this.insideRadius.indexOf(restaurant), 1);
+        }
       }
     });
+    console.log(this.insideRadius);
   }
 
   sendRadius(newRadius) {
@@ -41,6 +45,7 @@ constructor(private restaurantService: RestaurantService) {}
   mapDragEnd($event) {
     this.lat = $event.coords.lat;
     this.lng = $event.coords.lng;
+    this.restaurantInsideRadius();
   }
 
   getDistance(lat2, lng2) {

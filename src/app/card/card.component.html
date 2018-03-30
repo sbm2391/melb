@@ -1,7 +1,7 @@
 <section class="container">
     <div>
       <div class="row">
-        <div *ngFor="let restaurant of theRestaurants" class="col s12 m6"> 
+        <div *ngFor="let restaurant of theRestaurants | orderBy:'rating':true" class="col s12 m6"> 
           <div class="card">
             <div class="card-content">
               <p class="text-center"><b>{{restaurant.name}}</b></p>

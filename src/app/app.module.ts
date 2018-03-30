@@ -9,6 +9,7 @@ import { MapComponent } from './map/map.component';
 import { AgmCoreModule } from '@agm/core';
 import { CardComponent } from './card/card.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { OrderModule } from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
   imports: [
     BrowserModule,
     HttpModule,
+    OrderModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDB4N0qSz7PO1NvWoEbcM5PFBYwKGxwD-I'
     })

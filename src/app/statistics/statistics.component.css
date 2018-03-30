@@ -1,5 +1,10 @@
 .restaurant-statistics{
     width: 400px;
     box-sizing: border-box;
-    padding: 20px;
+    padding:0 20px;
+    
+}
+.restaurant-statistics strong{
+    color: #E35141;
+
 }
