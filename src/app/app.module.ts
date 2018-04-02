@@ -10,6 +10,8 @@ import { AgmCoreModule } from '@agm/core';
 import { CardComponent } from './card/card.component';
 import { StatisticsComponent } from './statistics/statistics.component';
 import { OrderModule } from 'ngx-order-pipe';
+import { FacebookModule } from 'ngx-facebook';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { OrderModule } from 'ngx-order-pipe';
     BrowserModule,
     HttpModule,
     OrderModule,
+    FacebookModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDB4N0qSz7PO1NvWoEbcM5PFBYwKGxwD-I'
     })

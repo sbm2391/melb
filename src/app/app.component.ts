@@ -15,7 +15,6 @@ ngOnInit() {
   this.restaurantService.fetchRestaurants()
     .subscribe(restaurant => {
       this.restaurants = restaurant;
-      console.log(this.restaurants);
     });
   }
 }

@@ -1,3 +1,9 @@
+<script>
+
+console.log("finished rendering plugins!!");
+  
+  // In your onload handler
+</script>
 <section class="container">
     <div>
       <div class="row">
@@ -21,11 +27,12 @@
             </div>
             <div class="card-action text-center flex-box-row">
               <a class="contact-site" href={{restaurant.contact.site}}>Go to the site</a>
-              <div class="fb-like facebook" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+              <div class="fb-like facebook" [attr.data-href]="restaurant.contact.site" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-                  
+  
+               

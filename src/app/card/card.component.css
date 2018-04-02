@@ -18,3 +18,11 @@
 a{
     margin: 0;
 }
+
+
+[fb-xfbml-state="rendered"]{
+    display:block;
+}
+[fb-xfbml-state="parsed"]{
+    display:none;
+}
