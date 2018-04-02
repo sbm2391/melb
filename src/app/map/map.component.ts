@@ -20,7 +20,6 @@ constructor(private restaurantService: RestaurantService) {}
     this.restaurantService.fetchRestaurants()
     .subscribe(restaurant => {
       this.restaurants = restaurant;
-      console.log(this.restaurants);
       this.restaurantInsideRadius();
     });
   }

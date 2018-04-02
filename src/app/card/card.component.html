@@ -17,6 +17,7 @@ console.log("finished rendering plugins!!");
                     <p><b>Contact</b></p>
                     <p><b>Email:</b> {{restaurant.contact.email}}</p>
                     <p><b>Phone:</b> {{restaurant.contact.phone}}</p>
+                    <a id="contact-site" href={{restaurant.contact.site}}>Go to the site</a>
                   </div>
                 </div>
                 <div class="flex-box-column">
@@ -26,8 +27,7 @@ console.log("finished rendering plugins!!");
               </div>
             </div>
             <div class="card-action text-center flex-box-row">
-              <a class="contact-site" href={{restaurant.contact.site}}>Go to the site</a>
-              <div class="fb-like facebook" [attr.data-href]="restaurant.contact.site" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
+              <div class="fb-like facebook" [attr.data-href]="restaurant.contact.site" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true" ></div>
             </div>
           </div>
         </div>
