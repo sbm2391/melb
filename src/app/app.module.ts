@@ -12,6 +12,7 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { OrderModule } from 'ngx-order-pipe';
 import { FacebookModule } from 'ngx-facebook';
 import { FooterComponent } from './footer/footer.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     MapComponent,
     CardComponent,
     StatisticsComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
